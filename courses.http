@@ -1,0 +1,35 @@
+### GET ALL COURSES
+GET http://localhost:8080/api/courses
+
+### GET FILTERED COURSES
+GET http://localhost:8080/api/courses?name=java
+
+### GET COURSE BY ID
+GET http://localhost:8080/api/courses/1
+
+### CREATE NEW COURSE
+POST http://localhost:8080/api/courses
+Content-Type: application/json
+
+{
+  "name": "PROG2",
+  "description": "Learn spring boot",
+  "active": true,
+  "startDate": "2025-08-25",
+  "endDate": "2026-01-28"
+}
+
+### UPDATE COURSE
+PUT http://localhost:8080/api/courses/5
+Content-Type: application/json
+
+{
+  "name": "PROG2 UPDATED",
+  "description": "Learn spring boot and microservices",
+  "active": true,
+  "startDate": "2025-08-25",
+  "endDate": "2026-01-28"
+}
+
+### DELETE COURSE
+DELETE http://localhost:8080/api/courses/5
